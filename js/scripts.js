@@ -18,15 +18,14 @@ pokemonList.push({
     types: ["dark"]
 });
 
-for (var i = 0; i < pokemonList.length; i++) {
-    var pokemon = pokemonList[i];
+pokemonList.forEach(function(pokemon) {
     var name = pokemon.name;
     var height = pokemon.height;
 
     document.write(name + " (height: " + height + ")");
 
-    if(height>2) {
+    if (height > 2) {
         document.write(" - Wow, that's big!");
     }
-   document.write("<br>"); 
-}
+    document.write("<br>");
+});
