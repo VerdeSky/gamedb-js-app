@@ -9,13 +9,35 @@ var pokemonRepository = (function () {
         pokemonList.push(pokemon);
     }
 
+    function addListItem(pokemon) {
+        var listItem = document.createElement('li');
+        var button = document.createElement('button');
+
+        button.innerText = pokemon.name;
+        button.classList.add('pokemon-button');
+
+        button.addEventListener('click', function () {
+            showDetails(pokemon);
+        });
+
+        listItem.appendChild(button);
+        pokemonListElement.appendChild(listItem);
+    }
+
+    function showDetails(pokemon) {
+        console.log(pokemon);
+        // More functionality related to displaying details can be added here later
+    }
+
     return {
         getAll: getAll,
-        add: add
+        add: add,
+        addListItem: addListItem,
+        showDetails: showDetails
     };
 })();
 
-
+// Adding Pokémon data
 pokemonRepository.add({
     name: "Dragonite",
     height: 2.2,
@@ -34,14 +56,8 @@ pokemonRepository.add({
     types: ["dark"]
 });
 
+var pokemonListElement = document.querySelector('.pokemon-list');
+
 pokemonRepository.getAll().forEach(function (pokemon) {
-    var name = pokemon.name;
-    var height = pokemon.height;
-
-    document.write(name + " (height: " + height + ")");
-
-    if (height > 2) {
-        document.write(" - Wow, that's big!");
-    }
-    document.write("<br>");
+    pokemonRepository.addListItem(pokemon);
 });
