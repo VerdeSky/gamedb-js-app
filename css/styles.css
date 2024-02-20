@@ -1,37 +1,42 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .pokemon-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .pokemon-list li {
-    margin-bottom: 10px;
-  }
-  
-  .pokemon-button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .pokemon-button:hover {
-    background-color: #2980b9;
-  }
+  font-family: Arial, sans-serif; /* Sets the default font for the page */
+  background-color: #f4f4f4; /* Light grey background color */
+  margin: 0; /* Removes default margin */
+  padding: 20px; /* Adds padding around the content of the entire page */
+  text-align: center; /* Centers text horizontally */
+}
+
+/* Styling for main heading */
+h1 {
+  color: #333; /* Dark grey color for the text */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Styling for the list that contains Pokémon */
+.pokemon-list {
+  list-style: none; /* Removes bullet points from list items */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+/* Styling for each list item in the Pokémon list */
+.pokemon-list li {
+  margin-bottom: 10px; /* Adds space below each list item */
+}
+
+/* Styling for buttons associated with Pokémon in the list */
+.pokemon-button {
+  background-color: #3498db; /* Bright blue background color */
+  color: #fff; /* White text color */
+  border: none; /* Removes the default border */
+  padding: 10px 20px; /* Adds padding inside the button */
+  margin: 10px; /* Adds margin around the button */
+  border-radius: 5px; /* Rounds the corners of the button */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+  transition: background-color 0.3s ease; /* Animates the background color change on hover */
+}
+
+/* Styling for the hover state of Pokémon buttons */
+.pokemon-button:hover {
+  background-color: #2980b9; /* Darker blue background color when hovered */
+}
