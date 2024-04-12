@@ -40,3 +40,16 @@ h1 {
 .pokemon-button:hover {
   background-color: #2980b9; /* Darker blue background color when hovered */
 }
+
+#loading-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 1000; 
+}
