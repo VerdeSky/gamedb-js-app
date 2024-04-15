@@ -95,12 +95,18 @@ var pokemonRepository = (function () {
 
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function (detailedPokemon) {
-            console.log('Name:', detailedPokemon.name);
-            console.log('Height:', detailedPokemon.height);
-            console.log('Types:', JSON.stringify(detailedPokemon.types));
-            console.log('Image URL:', detailedPokemon.imageUrl);
+            // Set the content of the modal
+            document.querySelector('.pokemon-image').src = detailedPokemon.imageUrl;
+            document.querySelector('.pokemon-image').alt = detailedPokemon.name;
+            document.querySelector('.pokemon-name').textContent = detailedPokemon.name;
+            document.querySelector('.pokemon-type span').textContent = detailedPokemon.types.join(', ');
+            document.querySelector('.pokemon-height span').textContent = detailedPokemon.height + ' m';
+            
+            // Display the modal
+            modal.style.display = 'block';
         });
     }
+    
 
     // Publicly exposed functions of the module
     return {
@@ -120,3 +126,21 @@ pokemonRepository.loadList().then(function () {
         pokemonRepository.addListItem(pokemon);
     });
 });
+
+// Get the modal
+var modal = document.getElementById("pokemonModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

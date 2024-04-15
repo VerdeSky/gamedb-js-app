@@ -9,7 +9,18 @@
   </head>
   <body>
     <h1>Pokedex</h1>
-    <ui class = "pokemon-list"></ui>
+    <ul class = "pokemon-list"></ul>
+    <div id="pokemonModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="pokemon_image_url" alt="Pokémon Name" class="pokemon-image">
+        <div class="pokemon-info">
+          <h1 class="pokemon-name">Pokémon Name</h1>
+          <p class="pokemon-type">Type: <span>Type Here</span></p>
+          <p class="pokemon-height">Height: <span>Height Here</span></p>
+        </div>
+      </div>
+    </div>
     <script src="js/promise-pollyfill.js"></script>
     <script src="js/fetch-pollyfill.js"></script>
     <script src="js/scripts.js"></script>
