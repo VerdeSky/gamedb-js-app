@@ -80,18 +80,24 @@ var pokemonRepository = (function () {
             });
     }
 
-    // Function to create a list item for a Pokemon and add it to the UI
     function addListItem(pokemon) {
         var listItem = document.createElement('li');
+        listItem.classList.add('list-group-item'); // Apply Bootstrap class
+    
         var button = document.createElement('button');
         button.innerText = pokemon.name;
-        button.classList.add('pokemon-button');
+        button.classList.add('btn', 'btn-primary', 'pokemon-button'); // Apply Bootstrap button classes
+        button.setAttribute('data-bs-toggle', 'modal');  // Bootstrap data attribute for modal
+        button.setAttribute('data-bs-target', '#pokemonModal');  // Target the modal ID
+    
         button.addEventListener('click', function () {
             showDetails(pokemon);
         });
+    
         listItem.appendChild(button);
         document.querySelector('.pokemon-list').appendChild(listItem);
     }
+    
 
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function (detailedPokemon) {
@@ -101,11 +107,9 @@ var pokemonRepository = (function () {
             document.querySelector('.pokemon-name').textContent = detailedPokemon.name;
             document.querySelector('.pokemon-type span').textContent = detailedPokemon.types.join(', ');
             document.querySelector('.pokemon-height span').textContent = detailedPokemon.height + ' m';
-            
-            // Display the modal
-            modal.style.display = 'block';
         });
     }
+    
     
 
     // Publicly exposed functions of the module

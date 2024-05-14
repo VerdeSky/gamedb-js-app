@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif; /* Sets the default font for the page */
-  background-color: #f4f4f4; /* Light grey background color */
+  background-color: #228B22; /*Forest Green*/
   margin: 0; /* Removes default margin */
   padding: 20px; /* Adds padding around the content of the entire page */
   text-align: center; /* Centers text horizontally */
@@ -8,7 +8,7 @@ body {
 
 /* Styling for main heading */
 h1 {
-  color: #333; /* Dark grey color for the text */
+  color: #F0F0F0; /* Cloud White */
   margin-bottom: 20px; /* Space below the heading */
 }
 
@@ -26,7 +26,7 @@ h1 {
 
 /* Styling for buttons associated with Pokémon in the list */
 .pokemon-button {
-  background-color: #3498db; /* Bright blue background color */
+  background-color: #8A9A5B; /* Moss Green background color */
   color: #fff; /* White text color */
   border: none; /* Removes the default border */
   padding: 10px 20px; /* Adds padding inside the button */
@@ -38,7 +38,7 @@ h1 {
 
 /* Styling for the hover state of Pokémon buttons */
 .pokemon-button:hover {
-  background-color: #2980b9; /* Darker blue background color when hovered */
+  background-color: #228B22; /* Darker Green background color when hovered */
 }
 
 #loading-message {
@@ -70,7 +70,7 @@ h1 {
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: #d2b48c;
   margin: 10% auto; /* 10% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -107,11 +107,11 @@ h1 {
 }
 
 .pokemon-name {
-  color: #333;
+  color: #F0F0F0;
   font-size: 24px;
 }
 
 .pokemon-type, .pokemon-height {
-  color: #666;
+  color: #8B4513;
   font-size: 18px;
 }
